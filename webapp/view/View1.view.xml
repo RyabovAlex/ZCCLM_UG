@@ -3,89 +3,96 @@
 		<pages>
 			<Page title="Usage consistency Monitor">
 			<content>
-			    <sap.ui.layout:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="layout1">
-			        <sap.ui.layout:content>
-			            <Table xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" noDataText="Drop column list items here and columns in the area above" id="DSO_Day" headerText="Daily Slices" items="{path:'/DSO_DaySet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
-			                <items>
-			                    <ColumnListItem type="Active" id="item0_1545658675265_copy_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0">
-			                        <cells>
-			                            <Text text="{UsageDate}" id="text16_copy_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0"/>
-			                            <Text text="{DSODate}" id="text17_copy_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0"/>
-			                            <Text text="{ExtractDate}" id="text18_copy_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0"/>
-			                            <Text text="{ScmonStat}" id="text18_copy6_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0"/>
-			                            <Text text="{AggrWeek}" id="text18_copy7_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0"/>
-			                            <Text text="{AggrMonth}" id="text18_copy8_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0"/>
-			                            <Text text="{AggrYear}" id="text18_copy9_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0"/>
-			                            </cells>
-			                        
-			                    </ColumnListItem>
+			    <TextArea xmlns="sap.m" value="Select system" rows="1" id="area0"/><ComboBox xmlns="sap.m" id="box0">
+			        <items>
+			            <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item0"/>
+			            <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item1"/>
+			            </items>
+			        
+			    </ComboBox>
+			    <sap.ui.layout:Grid xmlns:sap.ui.layout="sap.ui.layout" id="grid0_1545734285646" defaultSpan="XL12 L12 M12 S12">
+			    <sap.ui.layout:content>
+			        <Table xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" noDataText="Drop column list items here and columns in the area above" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" items="{path:'/DSO_DaySet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
+			            <items>
+			                <ColumnListItem type="Active" id="item0_1545658675265_copy_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0_copy_DSO_Day_0">
+			                    <cells>
+			                        <Text text="{UsageDate}" id="text16"/>
+			                        <Text text="{DSODate}" id="text17_copy_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0_copy_DSO_Day_0"/>
+			                        <Text text="{ExtractDate}" id="text18_copy_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0_copy_DSO_Day_0"/>
+			                        <Text text="{ScmonStat}" id="text18_copy6_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0_copy_DSO_Day_0"/>
+			                        <Text text="{AggrWeek}" id="text18_copy7_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0_copy_DSO_Day_0"/>
+			                        <Text text="{AggrMonth}" id="text18_copy8_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0_copy_DSO_Day_0"/>
+			                        <Text text="{AggrYear}" id="text18_copy9_DSO_Day_0_DSO_Day_0_copy2_DSO_Day_0_copy_DSO_Day_0_DSO_Day_0_copy_DSO_Day_0"/>
+			                        </cells>
 			                    
-			                </items>
-			                <columns>
-			                    <Column id="column0">
-			                        <header>
-			                            <Label id="label0" text="Calendar day (sequential)"/>
-			                            
-			                        </header>
+			                </ColumnListItem>
+			                
+			            </items>
+			            <columns>
+			                <Column id="column0">
+			                    <header>
+			                        <Label id="label0" text="Calendar day (sequential)" width="200px"/>
 			                        
-			                    </Column>
-			                    <Column id="column1">
-			                        <header>
-			                            <Label id="label1" text="Day in DSO"/>
-			                            
-			                        </header>
+			                    </header>
+			                    
+			                </Column>
+			                <Column id="column1" tooltip="Shows if date still exists in DSO">
+			                    <header>
+			                        <Label id="label1" text="Day in DSO"/>
 			                        
-			                    </Column>
-			                    <Column id="column2">
-			                        <header>
-			                            <Label text="Extraction Date from MS" id="label2"/>
-			                            
-			                        </header>
+			                    </header>
+			                    
+			                </Column>
+			                <Column id="column2">
+			                    <header>
+			                        <Label text="Extraction Date from MS" id="label2"/>
 			                        
-			                    </Column>
-			                    <Column id="column3">
-			                        <header>
-			                            <Label text="SCMON stat entry" id="label3"/>
-			                            
-			                        </header>
+			                    </header>
+			                    
+			                </Column>
+			                <Column id="column3">
+			                    <header>
+			                        <Label text="SCMON stat entry" id="label3"/>
 			                        
-			                    </Column>
-			                    <Column id="column4">
-			                        <header>
-			                            <Label text="Aggr: Week" id="label4"/>
-			                            
-			                        </header>
+			                    </header>
+			                    
+			                </Column>
+			                <Column id="column4">
+			                    <header>
+			                        <Label text="Aggr: Week" id="label4"/>
 			                        
-			                    </Column>
-			                    <Column id="column5">
-			                        <header>
-			                            <Label text="Aggr: Month" id="label5"/>
-			                            
-			                        </header>
+			                    </header>
+			                    
+			                </Column>
+			                <Column id="column5">
+			                    <header>
+			                        <Label text="Aggr: Month" id="label5"/>
 			                        
-			                    </Column>
-			                    <Column id="column6">
-			                        <header>
-			                            <Label text="Aggr: Year" id="label6"/>
-			                            
-			                        </header>
+			                    </header>
+			                    
+			                </Column>
+			                <Column id="column6">
+			                    <header>
+			                        <Label text="Aggr: Year" id="label6"/>
 			                        
-			                    </Column>
-			                    </columns>
-			                </Table>
-			        </sap.ui.layout:content>
-			    </sap.ui.layout:HorizontalLayout>
+			                    </header>
+			                    
+			                </Column>
+			                </columns>
+			            </Table>
+			    </sap.ui.layout:content>
+			    </sap.ui.layout:Grid>
 			    <sap.ui.layout:Grid xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" id="grid0" defaultSpan="XL6 L6 M6 S12">
 			        <sap.ui.layout:content>
 			            <sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout0">
 			                <sap.ui.layout:content>
-			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0" headerText="Weekly Slice" items="{path:'/DSO_WeekSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
+			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0" headerText="Week DSO (0SM_UPLDW)" items="{path:'/DSO_WeekSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
 			                        <items>
-			                            <ColumnListItem type="Active" id="item0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0">
+			                            <ColumnListItem type="Active" id="item0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0">
 			                                <cells>
-			                                    <Text text="{Days}" id="text0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0"/>
-			                                    <Text text="{Weeks}" id="text1_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0"/>
-			                                    <Text text="{Availability}" id="text2_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0"/>
+			                                    <Text text="{Days}" id="text0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0"/>
+			                                    <Text text="{Weeks}" id="text1_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0"/>
+			                                    <Text text="{Availability}" id="text2_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0"/>
 			                                    </cells>
 			                                
 			                            </ColumnListItem>
@@ -115,48 +122,12 @@
 			                            </Column>
 			                            </columns>
 			                        </Table>
-			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="Drop column list items here and columns in the area above" id="table0_copy" headerText="Monthly Slice" items="{path:'/DSO_MonthSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
-			                        <items>
-			                            <ColumnListItem type="Active" id="item0_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0">
-			                                <cells>
-			                                    <Text text="{Days}" id="text0_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0"/>
-			                                    <Text text="{Months}" id="text1_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0"/>
-			                                    <Text text="{Availability}" id="text2_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0"/>
-			                                    </cells>
-			                                
-			                            </ColumnListItem>
-			                            
-			                        </items>
-			                        <columns>
-			                            <Column id="column0_1545687701281_copy">
-			                                <header>
-			                                    <Label text="Aggregation days" id="label0_1545687701281_copy"/>
-			                                    
-			                                </header>
-			                                
-			                            </Column>
-			                            <Column id="column1_1545687701282_copy">
-			                                <header>
-			                                    <Label text="Calendar month" id="label1_1545687701281_copy"/>
-			                                    
-			                                </header>
-			                                
-			                            </Column>
-			                            <Column id="column2_1545687701282_copy">
-			                                <header>
-			                                    <Label text="Availability" id="label2_1545687701282_copy"/>
-			                                    
-			                                </header>
-			                                
-			                            </Column>
-			                            </columns>
-			                        </Table>
 			                </sap.ui.layout:content>
 			            </sap.ui.layout:VerticalLayout>
 			            <sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout0_copy">
 			                
 			                <sap.ui.layout:content>
-			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0_copy2" headerText="Week Historical" items="{path:'/BW_WeekSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
+			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0_copy2" headerText="Week Historical (0SM_UPL_W)" items="{path:'/BW_WeekSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
 			                        <items>
 			                            <ColumnListItem type="Active" id="item0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy2_table0_copy2_0">
 			                                <cells>
@@ -184,35 +155,165 @@
 			                            </Column>
 			                            </columns>
 			                        </Table>
-			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0_copy3" headerText="Month Historical" items="{path:'/BW_MonthSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
+			                </sap.ui.layout:content>
+			            </sap.ui.layout:VerticalLayout>
+			            </sap.ui.layout:content>
+			        
+			    </sap.ui.layout:Grid>
+			    <sap.ui.layout:Grid xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" id="grid1" defaultSpan="XL6 L6 M6 S12">
+			        <sap.ui.layout:content>
+			            <sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout0_copy2">
+			                <sap.ui.layout:content>
+			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" noDataText="Drop column list items here and columns in the area above" id="table0_copy7" headerText="Month DSO (0SM_UPLDM)" items="{path:'/DSO_MonthSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
 			                        <items>
-			                            <ColumnListItem type="Active" id="item0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0">
+			                            <ColumnListItem type="Active" id="item0_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0_copy_table0_copy_0_copy_table0_copy7_0_table0_copy7_0">
 			                                <cells>
-			                                    <Text text="{Months}" id="text1_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0"/>
-			                                    <Text text="{Availability}" id="text2_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0"/>
+			                                    <Text text="{Days}" id="text0_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0_copy_table0_copy_0_copy_table0_copy7_0_table0_copy7_0"/>
+			                                    <Text text="{Months}" id="text1_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0_copy_table0_copy_0_copy_table0_copy7_0_table0_copy7_0"/>
+			                                    <Text text="{Availability}" id="text2_copy_table0_copy_0_copy_table0_copy_0_table0_copy_0_copy2_table0_copy_0_copy_table0_copy_0_table0_copy_0_table0_copy_0_copy_table0_copy_0_copy_table0_copy7_0_table0_copy7_0"/>
 			                                    </cells>
 			                                
 			                            </ColumnListItem>
 			                            
 			                        </items>
 			                        <columns>
-			                            <Column id="column1_1545687701282_copy3">
+			                            <Column id="column0_1545687701281_copy4">
 			                                <header>
-			                                    <Label text="Calendar week" id="label1_1545687701281_copy3"/>
+			                                    <Label text="Aggregation days" id="label0_1545687701281_copy4"/>
 			                                    
 			                                </header>
 			                                
 			                            </Column>
-			                            <Column id="column2_1545687701282_copy3">
+			                            <Column id="column1_1545687701282_copy7">
 			                                <header>
-			                                    <Label text="Availability" id="label2_1545687701282_copy3"/>
+			                                    <Label text="Calendar month" id="label1_1545687701281_copy7"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            <Column id="column2_1545687701282_copy7">
+			                                <header>
+			                                    <Label text="Availability" id="label2_1545687701282_copy7"/>
 			                                    
 			                                </header>
 			                                
 			                            </Column>
 			                            </columns>
 			                        </Table>
-			                </sap.ui.layout:content>
+			                    </sap.ui.layout:content>
+			                
+			            </sap.ui.layout:VerticalLayout>
+			            <sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout0_copy3">
+			                <sap.ui.layout:content>
+			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0_copy10" headerText="Month Historical (0SM_UPL_M)" items="{path:'/BW_MonthSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
+			                        <items>
+			                            <ColumnListItem type="Active" id="item0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0_copy2_table0_copy10_0_table0_copy10_0">
+			                                <cells>
+			                                    <Text text="{Months}" id="text1_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0_copy2_table0_copy10_0_table0_copy10_0"/>
+			                                    <Text text="{Availability}" id="text2_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0_copy2_table0_copy10_0_table0_copy10_0"/>
+			                                    </cells>
+			                                
+			                            </ColumnListItem>
+			                            
+			                        </items>
+			                        <columns>
+			                            <Column id="column1_1545687701282_copy10">
+			                                <header>
+			                                    <Label text="Calendar week" id="label1_1545687701281_copy10"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            <Column id="column2_1545687701282_copy10">
+			                                <header>
+			                                    <Label text="Availability" id="label2_1545687701282_copy10"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            </columns>
+			                        </Table>
+			                    </sap.ui.layout:content>
+			                
+			            </sap.ui.layout:VerticalLayout>
+			            </sap.ui.layout:content>
+			        
+			    </sap.ui.layout:Grid>
+			    <sap.ui.layout:Grid xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" id="grid2" defaultSpan="XL6 L6 M6 S12">
+			        <sap.ui.layout:content>
+			            <sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout0_copy4">
+			                <sap.ui.layout:content>
+			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0_copy14" headerText="Year DSO (0SM_UPLDY)" items="{path:'/DSO_YearSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
+			                        <items>
+			                            <ColumnListItem type="Active" id="item0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0_copy_table0_copy4_0_copy_table0_copy8_0_table0_copy8_0_copy_table0_copy14_0">
+			                                <cells>
+			                                    <Text text="{Days}" id="text0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0_copy_table0_copy4_0_copy_table0_copy8_0_table0_copy8_0_copy_table0_copy14_0"/>
+			                                    <Text text="{Years}" id="text1_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0_copy_table0_copy4_0_copy_table0_copy8_0_table0_copy8_0_copy_table0_copy14_0"/>
+			                                    <Text text="{Availability}" id="text2_copy_table0_0_table0_0_copy2_table0_0_copy_table0_0_copy_table0_0_copy_table0_copy4_0_copy_table0_copy8_0_table0_copy8_0_copy_table0_copy14_0"/>
+			                                    </cells>
+			                                
+			                            </ColumnListItem>
+			                            
+			                        </items>
+			                        <columns>
+			                            <Column id="column0_1545687701281_copy8">
+			                                <header>
+			                                    <Label text="Aggregation days" id="label0_1545687701281_copy8"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            <Column id="column1_1545687701282_copy14">
+			                                <header>
+			                                    <Label text="Calendar week" id="label1_1545687701281_copy14"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            <Column id="column2_1545687701282_copy14">
+			                                <header>
+			                                    <Label text="Availability" id="label2_1545687701282_copy14"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            </columns>
+			                        </Table>
+			                    </sap.ui.layout:content>
+			                
+			            </sap.ui.layout:VerticalLayout>
+			            <sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout0_copy5">
+			                <sap.ui.layout:content>
+			                    <Table xmlns:sap.ui.layout="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" noDataText="No data found" id="table0_copy17" headerText="Year Historical (0SM_UPL_Y)" items="{path:'/BW_YearSet',filters:[{path:'System_ID',operator:'EQ',value1:'LOL'}]}">
+			                        <items>
+			                            <ColumnListItem type="Active" id="item0_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0_copy_table0_copy5_0_copy_table0_copy11_0_table0_copy11_0_copy_table0_copy17_0">
+			                                <cells>
+			                                    <Text text="{Years}" id="text1_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0_copy_table0_copy5_0_copy_table0_copy11_0_table0_copy11_0_copy_table0_copy17_0"/>
+			                                    <Text text="{Availability}" id="text2_copy_table0_0_table0_0_copy2_table0_0_copy_table0_copy2_0_copy_table0_copy3_0_table0_copy3_0_table0_copy3_0_table0_copy3_0_copy_table0_copy5_0_copy_table0_copy11_0_table0_copy11_0_copy_table0_copy17_0"/>
+			                                    </cells>
+			                                
+			                            </ColumnListItem>
+			                            
+			                        </items>
+			                        <columns>
+			                            <Column id="column1_1545687701282_copy17">
+			                                <header>
+			                                    <Label text="Calendar week" id="label1_1545687701281_copy17"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            <Column id="column2_1545687701282_copy17">
+			                                <header>
+			                                    <Label text="Availability" id="label2_1545687701282_copy17"/>
+			                                    
+			                                </header>
+			                                
+			                            </Column>
+			                            </columns>
+			                        </Table>
+			                    </sap.ui.layout:content>
+			                
 			            </sap.ui.layout:VerticalLayout>
 			            </sap.ui.layout:content>
 			        
