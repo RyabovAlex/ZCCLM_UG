@@ -1,0 +1,25 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZCCLM_ODATA_VL_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="LANDSCAPE" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="SAP System" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="DESCRIPTION"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="SYSTEM" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="SAP System" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Role" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="System Role" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="LTOS" sap:content-version="1">
+				<Key><PropertyRef Name="Landscapeid"/><PropertyRef Name="Systemid"/></Key><Property Name="Landscapeid" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="SAP System"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Systemclient" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Client" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Landscapedescription" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="LANDSCAPEDESCRIPTION"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Systemid" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="SAP System" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Systemrole" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="System Role"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZCCLM_ODATA_VL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="LANDSCAPESet" EntityType="ZCCLM_ODATA_VL_SRV.LANDSCAPE" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="SYSTEMSet" EntityType="ZCCLM_ODATA_VL_SRV.SYSTEM" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="LTOSSet" EntityType="ZCCLM_ODATA_VL_SRV.LTOS" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZCCLM_ODATA_VL_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZCCLM_ODATA_VL_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

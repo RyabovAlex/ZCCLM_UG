@@ -1,0 +1,209 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="MainScreen.controller.View1"
+	xmlns:sap.ui.layout="sap.ui.layout">
+	<App id="idAppControl">
+		<pages>
+			<Page title="Usage consistency Monitor">
+				<content>
+					<HBox width="100%" id="hbox0" alignContent="SpaceBetween" alignItems="Center" justifyContent="SpaceAround">
+						<items>
+							<ComboBox id="box0" placeholder="Select system" items="{VL>/SYSTEMSet}" selectionChange="onSystemSelect">
+								<items>
+									<core:Item xmlns:core="sap.ui.core" key="{VL>Id}" text="{VL>Id} - {VL>Role}" id="itemCB"/>
+								</items>
+							</ComboBox>
+						</items>
+					</HBox>
+					<sap.ui.layout:Grid id="grid0_1545734285646" defaultSpan="XL12 L12 M12 S12">
+						<sap.ui.layout:content>
+							<Table noDataText="Drop column list items here and columns in the area above" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" growing="true"
+								growingThreshold="50">
+								<items></items>
+								<columns>
+									<Column >
+										<header>
+											<Label text="Calendar day (sequential)" width="200px"/>
+										</header>
+									</Column>
+									<Column tooltip="Shows if date still exists in DSO">
+										<header>
+											<Label text="Day in DSO"/>
+										</header>
+									</Column>
+									<Column >
+										<header>
+											<Label text="Extraction Date from MS"/>
+										</header>
+									</Column>
+									<Column >
+										<header>
+											<Label text="SCMON stat entry"/>
+										</header>
+									</Column>
+									<Column >
+										<header>
+											<Label text="Aggr: Week"/>
+										</header>
+									</Column>
+									<Column >
+										<header>
+											<Label text="Aggr: Month"/>
+										</header>
+									</Column>
+									<Column >
+										<header>
+											<Label text="Aggr: Year"/>
+										</header>
+									</Column>
+								</columns>
+							</Table>
+						</sap.ui.layout:content>
+					</sap.ui.layout:Grid>
+					<sap.ui.layout:Grid id="grid0" defaultSpan="XL6 L6 M6 S12">
+						<sap.ui.layout:content>
+							<sap.ui.layout:VerticalLayout width="100%">
+								<sap.ui.layout:content>
+									<Table noDataText="No data found" id="DSO_Week" headerText="Week DSO (0SM_UPLDW)" growing="true" growingThreshold="50">
+										<items></items>
+										<columns>
+											<Column >
+												<header>
+													<Label text="Aggregation days"/>
+												</header>
+											</Column>
+											<Column >
+												<header>
+													<Label text="Calendar week"/>
+												</header>
+											</Column>
+											<Column >
+												<header>
+													<Label text="Availability"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</sap.ui.layout:content>
+							</sap.ui.layout:VerticalLayout>
+							<sap.ui.layout:VerticalLayout width="100%">
+								<sap.ui.layout:content>
+									<Table noDataText="No data found" id="BW_Week" headerText="Week Historical (0SM_UPL_W)" growing="true" growingThreshold="50">
+										<items></items>
+										<columns>
+											<Column >
+												<header>
+													<Label text="Calendar week"/>
+												</header>
+											</Column>
+											<Column >
+												<header>
+													<Label text="Availability"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</sap.ui.layout:content>
+							</sap.ui.layout:VerticalLayout>
+						</sap.ui.layout:content>
+					</sap.ui.layout:Grid>
+					<sap.ui.layout:Grid id="grid1" defaultSpan="XL6 L6 M6 S12">
+						<sap.ui.layout:content>
+							<sap.ui.layout:VerticalLayout width="100%">
+								<sap.ui.layout:content>
+									<Table noDataText="Drop column list items here and columns in the area above" id="DSO_Month" headerText="Month DSO (0SM_UPLDM)"
+										growing="true" growingThreshold="50">
+										<items></items>
+										<columns>
+											<Column >
+												<header>
+													<Label text="Aggregation days"/>
+												</header>
+											</Column>
+											<Column >
+												<header>
+													<Label text="Calendar month"/>
+												</header>
+											</Column>
+											<Column >
+												<header>
+													<Label text="Availability"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</sap.ui.layout:content>
+							</sap.ui.layout:VerticalLayout>
+							<sap.ui.layout:VerticalLayout width="100%">
+								<sap.ui.layout:content>
+									<Table noDataText="No data found" id="BW_Month" headerText="Month Historical (0SM_UPL_M)" growing="true" growingThreshold="50">
+										<items></items>
+										<columns>
+											<Column >
+												<header>
+													<Label text="Calendar week"/>
+												</header>
+											</Column>
+											<Column >
+												<header>
+													<Label text="Availability"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</sap.ui.layout:content>
+							</sap.ui.layout:VerticalLayout>
+						</sap.ui.layout:content>
+					</sap.ui.layout:Grid>
+					<sap.ui.layout:Grid id="grid2" defaultSpan="XL6 L6 M6 S12">
+						<sap.ui.layout:content>
+							<sap.ui.layout:VerticalLayout width="100%">
+								<sap.ui.layout:content>
+									<Table noDataText="No data found" id="DSO_Year" headerText="Year DSO (0SM_UPLDY)" sticky="ColumnHeaders" growing="true"
+										growingThreshold="50">
+										<items></items>
+										<columns>
+											<Column>
+												<header>
+													<Label text="Aggregation days"/>
+												</header>
+											</Column>
+											<Column>
+												<header>
+													<Label text="Calendar Month"/>
+												</header>
+											</Column>
+											<Column>
+												<header>
+													<Label text="Availability"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</sap.ui.layout:content>
+							</sap.ui.layout:VerticalLayout>
+							<sap.ui.layout:VerticalLayout width="100%">
+								<sap.ui.layout:content>
+									<Table noDataText="No data found" id="BW_Year" headerText="Year Historical (0SM_UPL_Y)" growingThreshold="50" growing="true">
+										<items></items>
+										<columns>
+											<Column>
+												<header>
+													<Label text="Calendar week"/>
+												</header>
+											</Column>
+											<Column>
+												<header>
+													<Label text="Availability"/>
+												</header>
+											</Column>
+										</columns>
+									</Table>
+								</sap.ui.layout:content>
+							</sap.ui.layout:VerticalLayout>
+						</sap.ui.layout:content>
+					</sap.ui.layout:Grid>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
