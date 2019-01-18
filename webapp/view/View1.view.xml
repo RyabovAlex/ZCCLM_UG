@@ -1,6 +1,4 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="MainScreen.controller.View1"
-	xmlns:sap.ui.layout="sap.ui.layout">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" controllerName="MainScreen.controller.View1">
 	<App id="idAppControl">
 		<pages>
 			<Page title="Usage consistency Monitor">
@@ -14,43 +12,86 @@
 							</ComboBox>
 						</items>
 					</HBox>
+					<sap.ui.layout:Grid xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" id="grid4" defaultSpan="XL12 L12 M12 S12">
+					    <sap.ui.layout:content>
+					        <Table noDataText="No data" id="Config" headerText="Current settings of aggregation and housekeeping">
+					            <columns>
+					                <Column id="column25_copy">
+					                    <header>
+					                        <Label text="Granularity" id="Granularity"/>
+					                        
+					                    </header>
+					                    
+					                </Column>
+					                <Column id="column26_copy">
+					                    <header>
+					                        <Label text="Aggregation settings" id="Aggregation"/>
+					                        
+					                    </header>
+					                    
+					                </Column>
+					                <Column id="column27_copy">
+					                    <header>
+					                        <Label text="Selected system settings" id="CURSYS_HK"/>
+					                        
+					                    </header>
+					                    
+					                </Column>
+					                <Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" id="column27_copy2">
+					                    <header>
+					                        <Label text="Your Default settings" id="CUST_HK"/>
+					                        
+					                    </header>
+					                    
+					                </Column>
+					                <Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" id="column27_copy3">
+					                    <header>
+					                        <Label text="SAP recommended HK settings " id="SAP_HK"/>
+					                        
+					                    </header>
+					                    
+					                </Column>
+					                </columns>
+					            </Table>
+					        </sap.ui.layout:content>
+					    
+					</sap.ui.layout:Grid>
 					<sap.ui.layout:Grid id="grid0_1545734285646" defaultSpan="XL12 L12 M12 S12">
 						<sap.ui.layout:content>
-							<Table noDataText="Drop column list items here and columns in the area above" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" growing="true"
-								growingThreshold="50">
-								<items></items>
+							<Table noDataText="No data found" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" growing="true" growingThreshold="50">
+								<items/>
 								<columns>
-									<Column >
+									<Column>
 										<header>
 											<Label text="Calendar day (sequential)" width="200px"/>
 										</header>
 									</Column>
 									<Column tooltip="Shows if date still exists in DSO">
 										<header>
-											<Label text="Day in DSO"/>
+											<Label text="Day in DSO" width="100px" textAlign="Center"/>
 										</header>
 									</Column>
-									<Column >
+									<Column>
 										<header>
 											<Label text="Extraction Date from MS"/>
 										</header>
 									</Column>
-									<Column >
+									<Column>
 										<header>
 											<Label text="SCMON stat entry"/>
 										</header>
 									</Column>
-									<Column >
+									<Column>
 										<header>
 											<Label text="Aggr: Week"/>
 										</header>
 									</Column>
-									<Column >
+									<Column>
 										<header>
 											<Label text="Aggr: Month"/>
 										</header>
 									</Column>
-									<Column >
+									<Column>
 										<header>
 											<Label text="Aggr: Year"/>
 										</header>
@@ -64,19 +105,19 @@
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
 									<Table noDataText="No data found" id="DSO_Week" headerText="Week DSO (0SM_UPLDW)" growing="true" growingThreshold="50">
-										<items></items>
+										<items/>
 										<columns>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Aggregation days"/>
 												</header>
 											</Column>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Calendar week"/>
 												</header>
 											</Column>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Availability"/>
 												</header>
@@ -88,14 +129,14 @@
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
 									<Table noDataText="No data found" id="BW_Week" headerText="Week Historical (0SM_UPL_W)" growing="true" growingThreshold="50">
-										<items></items>
+										<items/>
 										<columns>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Calendar week"/>
 												</header>
 											</Column>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Availability"/>
 												</header>
@@ -110,21 +151,20 @@
 						<sap.ui.layout:content>
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
-									<Table noDataText="Drop column list items here and columns in the area above" id="DSO_Month" headerText="Month DSO (0SM_UPLDM)"
-										growing="true" growingThreshold="50">
-										<items></items>
+									<Table noDataText="No data found" id="DSO_Month" headerText="Month DSO (0SM_UPLDM)" growing="true" growingThreshold="50">
+										<items/>
 										<columns>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Aggregation days"/>
 												</header>
 											</Column>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Calendar month"/>
 												</header>
 											</Column>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Availability"/>
 												</header>
@@ -136,14 +176,14 @@
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
 									<Table noDataText="No data found" id="BW_Month" headerText="Month Historical (0SM_UPL_M)" growing="true" growingThreshold="50">
-										<items></items>
+										<items/>
 										<columns>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Calendar week"/>
 												</header>
 											</Column>
-											<Column >
+											<Column>
 												<header>
 													<Label text="Availability"/>
 												</header>
@@ -158,9 +198,8 @@
 						<sap.ui.layout:content>
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
-									<Table noDataText="No data found" id="DSO_Year" headerText="Year DSO (0SM_UPLDY)" sticky="ColumnHeaders" growing="true"
-										growingThreshold="50">
-										<items></items>
+									<Table noDataText="No data found" id="DSO_Year" headerText="Year DSO (0SM_UPLDY)" sticky="ColumnHeaders" growing="true" growingThreshold="50">
+										<items/>
 										<columns>
 											<Column>
 												<header>
@@ -184,7 +223,7 @@
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
 									<Table noDataText="No data found" id="BW_Year" headerText="Year Historical (0SM_UPL_Y)" growingThreshold="50" growing="true">
-										<items></items>
+										<items/>
 										<columns>
 											<Column>
 												<header>
@@ -203,6 +242,9 @@
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
 				</content>
+			<footer>
+			    <OverflowToolbar class="sapContrast sapContrastPlus" width="100%" id="toolbar1"/>
+			</footer>
 			</Page>
 		</pages>
 	</App>
