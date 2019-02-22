@@ -11,7 +11,7 @@
 					sap:sortable="false" sap:filterable="false"/><Property Name="TBAggregated" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
 			<EntityType Name="BW_Year" sap:content-version="1">
-				<Key><PropertyRef Name="System_ID"/></Key><Property Name="System_ID" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+				<Key><PropertyRef Name="System_ID"/><PropertyRef Name="Years"/></Key><Property Name="System_ID" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false" sap:updatable="false"
 					sap:sortable="false" sap:filterable="false"/><Property Name="Years" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:creatable="false" sap:updatable="false"
 					sap:sortable="false" sap:filterable="false"/><Property Name="Availability" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false"
 					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TBDeleted" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:creatable="false" sap:updatable="false"
@@ -61,6 +61,10 @@
 					sap:sortable="false" sap:filterable="false"/><Property Name="CUST_HK" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:creatable="false" sap:updatable="false"
 					sap:sortable="false" sap:filterable="false"/><Property Name="CurSys_HK" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:creatable="false" sap:updatable="false"
 					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="System" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="SAP System" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Role" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="System Role" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
 			<EntityContainer Name="ZCCLM_ODATA_UG_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="DSO_YearSet" EntityType="ZCCLM_ODATA_UG_SRV.DSO_Year" sap:creatable="false" sap:updatable="false" sap:deletable="false"
 				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="BW_YearSet" EntityType="ZCCLM_ODATA_UG_SRV.BW_Year" sap:creatable="false" sap:updatable="false" sap:deletable="false"
 				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="BW_WeekSet" EntityType="ZCCLM_ODATA_UG_SRV.BW_Week" sap:creatable="false" sap:updatable="false" sap:deletable="false"
@@ -69,6 +73,7 @@
 				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="BW_MonthSet" EntityType="ZCCLM_ODATA_UG_SRV.BW_Month" sap:creatable="false" sap:updatable="false" sap:deletable="false"
 				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="DSO_DaySet" EntityType="ZCCLM_ODATA_UG_SRV.DSO_Day" sap:creatable="false" sap:updatable="false" sap:deletable="false"
 				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="ConfigSet" EntityType="ZCCLM_ODATA_UG_SRV.Config" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="SystemSet" EntityType="ZCCLM_ODATA_UG_SRV.System" sap:creatable="false" sap:updatable="false" sap:deletable="false"
 				sap:pageable="false" sap:addressable="false" sap:content-version="1"/></EntityContainer><atom:link rel="self"
 				href="https://webidecp-aa69cc5a6.dispatcher.hana.ondemand.com/destinations/LOL/sap/opu/odata/sap/ZCCLM_ODATA_UG_SRV/$metadata"
 				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version"

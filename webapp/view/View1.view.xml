@@ -5,9 +5,9 @@
 				<content>
 					<HBox width="100%" id="hbox0" alignContent="SpaceBetween" alignItems="Center" justifyContent="SpaceAround">
 						<items>
-							<ComboBox id="box0" placeholder="Select system" items="{VL>/SYSTEMSet}" selectionChange="onSystemSelect">
+							<ComboBox id="box0" placeholder="Select system" items="{/SystemSet}" selectionChange="onSystemSelect">
 								<items>
-									<core:Item xmlns:core="sap.ui.core" key="{VL>Id}" text="{VL>Id} - {VL>Role}" id="itemCB"/>
+									<core:Item xmlns:core="sap.ui.core" key="{Id}" text="{Id} - {Role}" id="itemCB"/>
 								</items>
 							</ComboBox>
 						</items>

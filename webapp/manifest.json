@@ -24,14 +24,6 @@
 					"odataVersion": "2.0",
 					"localUri": "localService/ZCCLM_ODATA_UG_SRV/metadata.xml"
 				}
-			},
-			"ZCCLM_ODATA_VL_SRV": {
-				"uri": "/sap/opu/odata/sap/ZCCLM_ODATA_VL_SRV/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0",
-					"localUri": "localService/ZCCLM_ODATA_VL_SRV/metadata.xml"
-				}
 			}
 		}
 	},
@@ -51,7 +43,10 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_belize", "sap_belize_hcb"]
+		"supportedThemes": [
+			"sap_belize",
+			"sap_belize_hcb"
+		]
 	},
 	"sap.ui5": {
 		"_version": "1.1.0",
@@ -78,16 +73,6 @@
 					"bundleName": "MainScreen.i18n.i18n"
 				}
 			},
-			"VL": {
-				"type": "sap.ui.model.odata.v2.ODataModel",
-				"settings": {
-					"defaultOperationMode": "Server",
-					"defaultBindingMode": "OneWay",
-					"defaultCountMode": "Request"
-				},
-				"dataSource": "ZCCLM_ODATA_VL_SRV",
-				"preload": true
-			},
 			"": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
@@ -100,9 +85,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -122,5 +109,9 @@
 				}
 			}
 		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zcclm_ug/webapp",
+		"_version": "1.1.0"
 	}
 }
