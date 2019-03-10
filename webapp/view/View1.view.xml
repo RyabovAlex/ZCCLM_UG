@@ -100,9 +100,14 @@
 							</Table>
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
-					<sap.ui.layout:Grid id="grid0" defaultSpan="XL6 L6 M6 S12">
+					<sap.ui.layout:Grid id="grid0" defaultSpan="XL2 L2 M2 S12">
 						<sap.ui.layout:content>
-							<sap.ui.layout:VerticalLayout width="100%">
+							<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100px" id="layout8">
+							    <sap.ui.layout:content>
+							        <Image src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png" width="140px" height="140px" id="image0"/>
+							    </sap.ui.layout:content>
+							    </sap.ui.layout:VerticalLayout>
+							<sap.ui.layout:VerticalLayout width="300px">
 								<sap.ui.layout:content>
 									<Table noDataText="No data found" id="DSO_Week" headerText="Week DSO (0SM_UPLDW)" growing="true" growingThreshold="50">
 										<items/>
@@ -126,24 +131,36 @@
 									</Table>
 								</sap.ui.layout:content>
 							</sap.ui.layout:VerticalLayout>
-							<sap.ui.layout:VerticalLayout width="100%">
-								<sap.ui.layout:content>
-									<Table noDataText="No data found" id="BW_Week" headerText="Week Historical (0SM_UPL_W)" growing="true" growingThreshold="50">
-										<items/>
-										<columns>
-											<Column>
-												<header>
-													<Label text="Calendar week"/>
-												</header>
-											</Column>
-											<Column>
-												<header>
-													<Label text="Availability"/>
-												</header>
-											</Column>
-										</columns>
-									</Table>
-								</sap.ui.layout:content>
+							<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100px" id="layout6">
+							    
+							    <sap.ui.layout:content>
+							        <Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png" width="140px" height="140px" id="image0_copy"/>
+							    </sap.ui.layout:content>
+							</sap.ui.layout:VerticalLayout>
+							<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="300px" id="layout7">
+							    <sap.ui.layout:content>
+							        <Table xmlns="sap.m" noDataText="No data found" id="BW_Week" headerText="Week Historical (0SM_UPL_W)" growing="true" growingThreshold="50">
+							            <items/>
+							            <columns>
+							                <Column id="column24">
+							                    <header>
+							                        <Label text="Calendar week" id="label24"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                <Column id="column25">
+							                    <header>
+							                        <Label text="Availability" id="label25"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                </columns>
+							            </Table>
+							        
+							    </sap.ui.layout:content>
+							    
 							</sap.ui.layout:VerticalLayout>
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
