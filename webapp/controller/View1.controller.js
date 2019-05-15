@@ -3,7 +3,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 	return Controller.extend("MainScreen.controller.View1", {
 		/**
 		 *@memberOf MainScreen.controller.View1
-		 */
+		 **/
 		onSystemSelect: function (oEvent) {
 			var systemId = oEvent.getParameters().selectedItem.getKey();
 			
@@ -19,9 +19,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 						text: "{DSODate}"
 					}),
 					new sap.m.Text({
-						text: "{ExtractDate}"
-					}),
-					new sap.m.Text({
 						text: "{ScmonStat}"
 					}),
 					new sap.m.Text({
@@ -32,6 +29,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					}),
 					new sap.m.Text({
 						text: "{AggrYear}"
+					}),
+					new sap.m.Text({
+						text: "{TBAggregated}"
 					})
 				],
 				vAlign: "Middle",
@@ -43,11 +43,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 				template: template,
 				filters: filters
 			};
-			
 			this.getView().byId("DSO_Day").bindItems(bindingInfo);
 
 			filters = [];
-			
 			filters.push(new sap.ui.model.Filter("System_ID", sap.ui.model.FilterOperator.EQ, systemId));
 			template = new sap.m.ColumnListItem({
 				cells: [
@@ -59,6 +57,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					}),
 					new sap.m.Text({
 						text: "{Availability}"
+					}),
+					new sap.m.Text({
+						text: "{TBAggregated}"
 					})
 				],
 				vAlign: "Middle",
@@ -83,6 +84,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					}),
 					new sap.m.Text({
 						text: "{Availability}"
+					}),
+					new sap.m.Text({
+						text: "{TBAggregated}"
 					})
 				],
 				vAlign: "Middle",
@@ -107,6 +111,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					}),
 					new sap.m.Text({
 						text: "{Availability}"
+					}),
+					new sap.m.Text({
+						text: "{TBAggregated}"
 					})
 				],
 				vAlign: "Middle",
@@ -128,6 +135,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					}),
 					new sap.m.Text({
 						text: "{Availability}"
+					}),
+					new sap.m.Text({
+						text: "{TBDeleted}"
 					})
 				],
 				vAlign: "Middle",
@@ -149,6 +159,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					}),
 					new sap.m.Text({
 						text: "{Availability}"
+					}),
+					new sap.m.Text({
+						text: "{TBDeleted}"
 					})
 				],
 				vAlign: "Middle",
@@ -170,6 +183,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					}),
 					new sap.m.Text({
 						text: "{Availability}"
+					}),
+					new sap.m.Text({
+						text: "{TBDeleted}"
 					})
 				],
 				vAlign: "Middle",

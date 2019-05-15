@@ -58,22 +58,18 @@
 					</sap.ui.layout:Grid>
 					<sap.ui.layout:Grid id="grid0_1545734285646" defaultSpan="XL12 L12 M12 S12">
 						<sap.ui.layout:content>
-							<Table noDataText="No data found" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" growing="true" growingThreshold="50">
+							<Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow_down.png" id="image0_copy6" width="120px"/>
+							<Table noDataText="No data found" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" growing="true" growingThreshold="50" alternateRowColors="true">
 								<items/>
 								<columns>
 									<Column>
 										<header>
-											<Label text="Calendar day (sequential)" width="200px"/>
+											<Label text="Calendar day (sequential)" width="200px" tooltip="Calendar days &quot;AS SHOULD&quot;"/>
 										</header>
 									</Column>
 									<Column tooltip="Shows if date still exists in DSO">
 										<header>
-											<Label text="Day in DSO" width="100px" textAlign="Center"/>
-										</header>
-									</Column>
-									<Column>
-										<header>
-											<Label text="Extraction Date from MS"/>
+											<Label text="DSO existence" width="200px"/>
 										</header>
 									</Column>
 									<Column>
@@ -96,19 +92,20 @@
 											<Label text="Aggr: Year"/>
 										</header>
 									</Column>
+									<Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" id="column22">
+									    <header>
+									        <Label text="To be aggregated" id="label24_1556049919662"/>
+									    </header>
+									</Column>
 								</columns>
 							</Table>
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
-					<sap.ui.layout:Grid id="grid0" defaultSpan="XL2 L2 M2 S12">
+					<sap.ui.layout:Grid id="grid0" defaultSpan="XL6 L6 M6 S12" containerQuery="true">
 						<sap.ui.layout:content>
-							<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100px" id="layout8">
-							    <sap.ui.layout:content>
-							        <Image src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png" width="140px" height="140px" id="image0"/>
-							    </sap.ui.layout:content>
-							    </sap.ui.layout:VerticalLayout>
-							<sap.ui.layout:VerticalLayout width="300px">
+							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
+									<Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow.png" id="image0" width="120px"/>
 									<Table noDataText="No data found" id="DSO_Week" headerText="Week DSO (0SM_UPLDW)" growing="true" growingThreshold="50">
 										<items/>
 										<columns>
@@ -127,18 +124,20 @@
 													<Label text="Availability"/>
 												</header>
 											</Column>
+											<Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" id="column21">
+											    <header>
+											        <Label text="For Aggregation" id="label21"/>
+											        
+											    </header>
+											    
+											</Column>
 										</columns>
 									</Table>
 								</sap.ui.layout:content>
 							</sap.ui.layout:VerticalLayout>
-							<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100px" id="layout6">
-							    
+							<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="layout7">
 							    <sap.ui.layout:content>
-							        <Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" src="https://ui5.sap.com/resources/sap/ui/documentation/sdk/images/logo_ui5.png" width="140px" height="140px" id="image0_copy"/>
-							    </sap.ui.layout:content>
-							</sap.ui.layout:VerticalLayout>
-							<sap.ui.layout:VerticalLayout xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" width="300px" id="layout7">
-							    <sap.ui.layout:content>
+							        <Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow1.png" id="image0_copy2" width="100px"/>
 							        <Table xmlns="sap.m" noDataText="No data found" id="BW_Week" headerText="Week Historical (0SM_UPL_W)" growing="true" growingThreshold="50">
 							            <items/>
 							            <columns>
@@ -156,6 +155,13 @@
 							                    </header>
 							                    
 							                </Column>
+							                <Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m">
+							                    <header>
+							                        <Label text="For Housekeeping" id="label21_1555053218293"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
 							                </columns>
 							            </Table>
 							        
@@ -168,6 +174,7 @@
 						<sap.ui.layout:content>
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
+									<Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow.png" id="image0_copy" width="120px"/>
 									<Table noDataText="No data found" id="DSO_Month" headerText="Month DSO (0SM_UPLDM)" growing="true" growingThreshold="50">
 										<items/>
 										<columns>
@@ -186,12 +193,20 @@
 													<Label text="Availability"/>
 												</header>
 											</Column>
+											<Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" id="column21_copy">
+											    <header>
+											        <Label text="For Aggregation"/>
+											        
+											    </header>
+											    
+											</Column>
 										</columns>
 									</Table>
 								</sap.ui.layout:content>
 							</sap.ui.layout:VerticalLayout>
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
+									<Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow1.png" id="image0_copy3" width="100px"/>
 									<Table noDataText="No data found" id="BW_Month" headerText="Month Historical (0SM_UPL_M)" growing="true" growingThreshold="50">
 										<items/>
 										<columns>
@@ -205,6 +220,13 @@
 													<Label text="Availability"/>
 												</header>
 											</Column>
+											<Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" id="column21_copy4">
+											    <header>
+											        <Label text="For Housekeeping"/>
+											        
+											    </header>
+											    
+											</Column>
 										</columns>
 									</Table>
 								</sap.ui.layout:content>
@@ -215,6 +237,7 @@
 						<sap.ui.layout:content>
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
+									<Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow.png" id="image0_copy4" width="120px"/>
 									<Table noDataText="No data found" id="DSO_Year" headerText="Year DSO (0SM_UPLDY)" sticky="ColumnHeaders" growing="true" growingThreshold="50">
 										<items/>
 										<columns>
@@ -233,12 +256,20 @@
 													<Label text="Availability"/>
 												</header>
 											</Column>
+											<Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" id="column21_copy2">
+											    <header>
+											        <Label text="For Aggregation"/>
+											        
+											    </header>
+											    
+											</Column>
 										</columns>
 									</Table>
 								</sap.ui.layout:content>
 							</sap.ui.layout:VerticalLayout>
 							<sap.ui.layout:VerticalLayout width="100%">
 								<sap.ui.layout:content>
+									<Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow1.png" id="image0_copy5" width="100px"/>
 									<Table noDataText="No data found" id="BW_Year" headerText="Year Historical (0SM_UPL_Y)" growingThreshold="50" growing="true">
 										<items/>
 										<columns>
@@ -252,6 +283,13 @@
 													<Label text="Availability"/>
 												</header>
 											</Column>
+											<Column xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m">
+											    <header>
+											        <Label text="For Housekeeping"/>
+											        
+											    </header>
+											    
+											</Column>
 										</columns>
 									</Table>
 								</sap.ui.layout:content>
@@ -259,9 +297,6 @@
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
 				</content>
-			<footer>
-			    <OverflowToolbar class="sapContrast sapContrastPlus" width="100%" id="toolbar1"/>
-			</footer>
 			</Page>
 		</pages>
 	</App>

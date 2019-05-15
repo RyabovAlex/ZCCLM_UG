@@ -1,1 +1,13 @@
 /* Enter your custom styles here */
+.sapUiVltCell sapuiVltCell {float:left;}
+/*#__xmlview0--image0{float:left;}*/
+
+img{float:left; margin-top:20px;}
+#__xmlview0--DSO_Day{padding-left:120px; margin-top:-140px;}
+#__xmlview0--DSO_Week{padding-left:120px}
+#__xmlview0--DSO_Month{padding-left:120px}
+#__xmlview0--DSO_Year{padding-left:120px}
+
+#__xmlview0--BW_Week{padding-left:110px}
+#__xmlview0--BW_Month{padding-left:110px}
+#__xmlview0--BW_Year{padding-left:110px}
