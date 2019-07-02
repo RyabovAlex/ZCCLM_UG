@@ -1,6 +1,6 @@
 sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 	"use strict";
-	return Controller.extend("MainScreen.controller.View1", {
+	return Controller.extend("mainscreen.controller.View1", {
 		/**
 		 *@memberOf MainScreen.controller.View1
 		 **/

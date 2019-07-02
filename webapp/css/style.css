@@ -11,3 +11,9 @@ img{float:left; margin-top:20px;}
 #__xmlview0--BW_Week{padding-left:110px}
 #__xmlview0--BW_Month{padding-left:110px}
 #__xmlview0--BW_Year{padding-left:110px}
+
+
+.sapUiRespGridSpanL12.sapUiRespGridSpanM12.sapUiRespGridSpanS12.sapUiRespGridSpanXL12 {
+    float: left;
+    overflow: visible;
+}
