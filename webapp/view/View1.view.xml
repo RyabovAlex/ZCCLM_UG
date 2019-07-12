@@ -1,6 +1,4 @@
-<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout"
-	controllerName="sap.cust.zcclm_ug.controller.View1">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" controllerName="sap.cust.zcclm_ug.controller.View1">
 	<App>
 		<pages>
 			<Page title="Usage consistency Monitor">
@@ -40,48 +38,65 @@
 					</sap.ui.layout:Grid>
 					<sap.ui.layout:Grid id="grid0_1545734285646" defaultSpan="XL12 L12 M12 S12">
 						<sap.ui.layout:content>
-							<Image src="media/arrow_down.png" id="image0_copy6" width="100px"/>
-							<Table noDataText="No data found" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" growing="true" growingThreshold="30"
-								alternateRowColors="true">
-								<items/>
-								<columns>
-									<Column>
-										<header>
-											<Label text="Calendar day (sequential)" width="200px" tooltip="Calendar days &quot;AS SHOULD&quot;"/>
-										</header>
-									</Column>
-									<Column tooltip="Shows if date still exists in DSO" hAlign="Center">
-										<header>
-											<Label text="DSO existence"/>
-										</header>
-									</Column>
-									<Column hAlign="Center">
-										<header>
-											<Label text="SCMON stat entry"/>
-										</header>
-									</Column>
-									<Column hAlign="Center">
-										<header>
-											<Label text="Aggr: Week"/>
-										</header>
-									</Column>
-									<Column hAlign="Center">
-										<header>
-											<Label text="Aggr: Month"/>
-										</header>
-									</Column>
-									<Column hAlign="Center">
-										<header>
-											<Label text="Aggr: Year"/>
-										</header>
-									</Column>
-									<Column hAlign="Center">
-										<header>
-											<Label text="To be removed" id="label24_1556049919662"/>
-										</header>
-									</Column>
-								</columns>
-							</Table>
+							<HBox width="100%" id="hbox6">
+							    <items>
+							        <Image xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" src="media/arrow_down.png" id="image0_copy6" width="100px"/>
+							        <Table xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns="sap.m" noDataText="No data found" id="DSO_Day" headerText="Day DSO (0SM_UPLDD)" growing="true" growingThreshold="30" alternateRowColors="true">
+							            <items/>
+							            <columns>
+							                <Column id="column26">
+							                    <header>
+							                        <Label text="Calendar day (sequential)" width="200px" tooltip="Calendar days &quot;AS SHOULD&quot;" id="label23"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                <Column tooltip="Shows if date still exists in DSO" hAlign="Center" id="column27">
+							                    <header>
+							                        <Label text="DSO existence" id="label24_1562943979721"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                <Column hAlign="Center" id="column28">
+							                    <header>
+							                        <Label text="SCMON stat entry" id="label25_1562943979723"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                <Column hAlign="Center" id="column29">
+							                    <header>
+							                        <Label text="Aggr: Week" id="label26"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                <Column hAlign="Center" id="column30">
+							                    <header>
+							                        <Label text="Aggr: Month" id="label27"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                <Column hAlign="Center" id="column31">
+							                    <header>
+							                        <Label text="Aggr: Year" id="label28"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                <Column hAlign="Center" id="column32">
+							                    <header>
+							                        <Label text="To be removed" id="label24_1556049919662"/>
+							                        
+							                    </header>
+							                    
+							                </Column>
+							                </columns>
+							            </Table>
+							    </items>
+							</HBox>
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
 					<sap.ui.layout:Grid id="grid0" defaultSpan="XL6 L6 M6 S12" containerQuery="true">
@@ -198,8 +213,7 @@
 						<sap.ui.layout:content>
 							<HBox>
 								<Image src="media/arrow.png" id="image0_copy4" width="100px"/>
-								<Table noDataText="No data found" id="DSO_Year" headerText="Year DSO (0SM_UPLDY)" sticky="ColumnHeaders" growing="true"
-									growingThreshold="30">
+								<Table noDataText="No data found" id="DSO_Year" headerText="Year DSO (0SM_UPLDY)" sticky="ColumnHeaders" growing="true" growingThreshold="30">
 									<items/>
 									<columns>
 										<Column>
