@@ -1,43 +1,96 @@
 sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 	"use strict";
-	return Controller.extend("mainscreen.controller.View1", {
+	return Controller.extend("sap.cust.zcclm_ug.controller.View1", {
 		/**
 		 *@memberOf MainScreen.controller.View1
 		 **/
-		onSystemSelect: function (oEvent) {
-			var systemId = oEvent.getParameters().selectedItem.getKey();
-			
+		onInit: function () {
+			this.getOwnerComponent().getRouter().getRoute("Systems")
+				.attachPatternMatched(this.onRouteMatched, this);
+		},
+
+		onRouteMatched: function (event) {
+			var systemId = event.getParameter("arguments").Id;
+
 			var filters = [];
 			filters.push(new sap.ui.model.Filter("System_ID", sap.ui.model.FilterOperator.EQ, systemId));
-			
+
 			var template = new sap.m.ColumnListItem({
 				cells: [
 					new sap.m.Text({
 						text: "{UsageDate}"
 					}),
-					new sap.m.Text({
-						text: "{DSODate}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'DSODate',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'DSODate',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{ScmonStat}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'ScmonStat',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'ScmonStat',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{AggrWeek}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'AggrWeek',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'AggrWeek',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{AggrMonth}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'AggrMonth',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'AggrMonth',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{AggrYear}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'AggrYear',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'AggrYear',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{TBAggregated}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'TBAggregated',
+							formatter: this.getIconType2
+						},
+						color: {
+							path: 'TBAggregated',
+							formatter: this.getIconColor2
+						},
+						size: "2em"
 					})
 				],
 				vAlign: "Middle",
 				type: "Active"
 			});
-			
+
 			var bindingInfo = {
 				path: "/DSO_DaySet",
 				template: template,
@@ -55,11 +108,27 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					new sap.m.Text({
 						text: "{Weeks}"
 					}),
-					new sap.m.Text({
-						text: "{Availability}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'Availability',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'Availability',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{TBAggregated}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'TBAggregated',
+							formatter: this.getIconType2
+						},
+						color: {
+							path: 'TBAggregated',
+							formatter: this.getIconColor2
+						},
+						size: "2em"
 					})
 				],
 				vAlign: "Middle",
@@ -82,11 +151,27 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					new sap.m.Text({
 						text: "{Months}"
 					}),
-					new sap.m.Text({
-						text: "{Availability}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'Availability',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'Availability',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{TBAggregated}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'TBAggregated',
+							formatter: this.getIconType2
+						},
+						color: {
+							path: 'TBAggregated',
+							formatter: this.getIconColor2
+						},
+						size: "2em"
 					})
 				],
 				vAlign: "Middle",
@@ -109,11 +194,27 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					new sap.m.Text({
 						text: "{Years}"
 					}),
-					new sap.m.Text({
-						text: "{Availability}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'Availability',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'Availability',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{TBAggregated}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'TBAggregated',
+							formatter: this.getIconType2
+						},
+						color: {
+							path: 'TBAggregated',
+							formatter: this.getIconColor2
+						},
+						size: "2em"
 					})
 				],
 				vAlign: "Middle",
@@ -133,11 +234,27 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					new sap.m.Text({
 						text: "{Weeks}"
 					}),
-					new sap.m.Text({
-						text: "{Availability}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'Availability',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'Availability',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{TBDeleted}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'TBDeleted',
+							formatter: this.getIconType2
+						},
+						color: {
+							path: 'TBDeleted',
+							formatter: this.getIconColor2
+						},
+						size: "2em"
 					})
 				],
 				vAlign: "Middle",
@@ -157,11 +274,27 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					new sap.m.Text({
 						text: "{Months}"
 					}),
-					new sap.m.Text({
-						text: "{Availability}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'Availability',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'Availability',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{TBDeleted}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'TBDeleted',
+							formatter: this.getIconType2
+						},
+						color: {
+							path: 'TBDeleted',
+							formatter: this.getIconColor2
+						},
+						size: "2em"
 					})
 				],
 				vAlign: "Middle",
@@ -181,11 +314,27 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 					new sap.m.Text({
 						text: "{Years}"
 					}),
-					new sap.m.Text({
-						text: "{Availability}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'Availability',
+							formatter: this.getIconType
+						},
+						color: {
+							path: 'Availability',
+							formatter: this.getIconColor
+						},
+						size: "2em"
 					}),
-					new sap.m.Text({
-						text: "{TBDeleted}"
+					new sap.ui.core.Icon({
+						src: {
+							path: 'TBDeleted',
+							formatter: this.getIconType2
+						},
+						color: {
+							path: 'TBDeleted',
+							formatter: this.getIconColor2
+						},
+						size: "2em"
 					})
 				],
 				vAlign: "Middle",
@@ -197,8 +346,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 				filters: filters
 			};
 			this.getView().byId("BW_Year").bindItems(bindingInfo);
-			
-			
+
 			filters = [];
 			filters.push(new sap.ui.model.Filter("System_ID", sap.ui.model.FilterOperator.EQ, systemId));
 			template = new sap.m.ColumnListItem({
@@ -228,6 +376,34 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 				filters: filters
 			};
 			this.getView().byId("Config").bindItems(bindingInfo);
+		},
+
+		getIconType: function (level) {
+			if (level === "X") {
+				return "sap-icon://accept";
+			} else {
+				return "sap-icon://cancel";
+			}
+		},
+
+		getIconColor: function (level) {
+			if (level === "X") {
+				return "#2b7d2b";
+			} else {
+				return "#bb0000";
+			}
+		},
+
+		getIconType2: function (level) {
+			if (level === "X") {
+				return "sap-icon://delete";
+			} else {
+				return "";
+			}
+		},
+
+		getIconColor2: function (level) {
+			return "#0000bb";
 		}
 	});
 });

@@ -1,0 +1,76 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:sap.ui.layout="sap.ui.layout" xmlns:core="sap.ui.core"
+	controllerName="sap.cust.zcclm_ug.controller.Main">
+	<App id="idAppControl">
+		<pages>
+			<Page title="Usage consistency Monitor">
+				<content>
+					<VBox>
+						<Table id="idSystems" items="{path: '/SystemSet'}" mode="SingleSelectMaster" itemPress="onSystemSelect" class="sapUiMediumMarginBottom">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Title text="Systems and UPL status" level="H2"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column>
+									<header>
+										<Label text="System"/>
+									</header>
+								</Column>
+								<Column hAlign="Center">
+									<header>
+										<Label text="Aggregation"/>
+									</header>
+								</Column>
+								<Column hAlign="Center">
+									<header>
+										<Label text="Housekeeping"/>
+									</header>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle" type="Navigation">
+									<cells>
+										<Text text="{Id}"/>
+										<core:Icon src="{path: 'Aggregation', formatter: '.getIconType' }" color="{path: 'Aggregation', formatter: '.getIconColor' }" size="2em"/>
+										<core:Icon src="{path: 'Housekeeping', formatter: '.getIconType' }" color="{path: 'Housekeeping', formatter: '.getIconColor' }" size="2em"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+						<Table id="idExtractors" mode="SingleSelectMaster" itemPress="handleExtractorDetailsPress" class="sapUiMediumMarginBottom">
+							<headerToolbar>
+								<Toolbar>
+									<content>
+										<Title text="Aggregation extractors on Solution Manager" level="H2"/>
+									</content>
+								</Toolbar>
+							</headerToolbar>
+							<columns>
+								<Column>
+									<Text text="Extractor"/>
+								</Column>
+								<Column>
+									<Text text="Status"/>
+								</Column>
+								<Column>
+									<Text text="Last Start"/>
+								</Column>
+								<Column>
+									<Text text="Last Stop"/>
+								</Column>
+								<Column>
+									<Text text="Last Records Number"/>
+								</Column>
+							</columns>
+							<items></items>
+						</Table>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

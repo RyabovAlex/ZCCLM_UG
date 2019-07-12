@@ -1,0 +1,29 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+			<ResponsivePopover title="Extractor Details"
+				class="sapUiContentPadding" placement="Vertical" showCloseButton="true" afterClose="onPopoverClose">
+				<content>
+				<Table>
+					<columns>
+						<Column>
+							<Text text="Time" />
+						</Column>
+						<Column>
+							<Text text="Phase" />
+						</Column>
+						<Column>
+							<Text text="Runtime" />
+						</Column>
+						<Column>
+							<Text text="Records" />
+						</Column>
+						<Column width="40%">
+							<Text text="Message" />
+						</Column>
+					</columns>
+					<items>
+					</items>
+				</Table>
+				</content>
+			</ResponsivePopover>
+</core:FragmentDefinition>
