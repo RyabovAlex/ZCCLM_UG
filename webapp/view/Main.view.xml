@@ -35,8 +35,8 @@
 								<ColumnListItem vAlign="Middle" type="Navigation">
 									<cells>
 										<Text text="{Id}"/>
-										<core:Icon src="{path: 'Aggregation', formatter: '.getIconType' }" color="{path: 'Aggregation', formatter: '.getIconColor' }" size="2em"/>
-										<core:Icon src="{path: 'Housekeeping', formatter: '.getIconType' }" color="{path: 'Housekeeping', formatter: '.getIconColor' }" size="2em"/>
+										<core:Icon src="{path: 'Aggregation', formatter: '.getIconType2' }" color="{path: 'Aggregation', formatter: '.getIconColor2' }" size="2em"/>
+										<core:Icon src="{path: 'Housekeeping', formatter: '.getIconType2' }" color="{path: 'Housekeeping', formatter: '.getIconColor2' }" size="2em"/>
 									</cells>
 								</ColumnListItem>
 							</items>

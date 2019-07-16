@@ -131,6 +131,22 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 			}
 		},
 
+		getIconType2: function (value) {
+			if (value === "X") {
+				return "sap-icon://accept";
+			} else {
+				return "sap-icon://cancel";
+			}
+		},
+
+		getIconColor2: function (value) {
+			if (value === "X") {
+				return "#2b7d2b";
+			} else {
+				return "#bb0000";
+			}
+		},
+
 		openPopover: function () {
 			this._oPopover.openBy(this.src);
 		},
