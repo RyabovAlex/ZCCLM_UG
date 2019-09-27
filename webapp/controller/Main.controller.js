@@ -113,19 +113,15 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 
 		getIconType: function (level) {
 			if (level === 0) {
-				return "sap-icon://accept";
-			} else if (level === 3) {
-				return "sap-icon://alert";
+				return "sap-icon://message-success";
 			} else {
-				return "sap-icon://cancel";
+				return "sap-icon://message-error";
 			}
 		},
 
 		getIconColor: function (level) {
 			if (level === 0) {
 				return "#2b7d2b";
-			} else if (level === 3) {
-				return "#bbbb00";
 			} else {
 				return "#bb0000";
 			}
