@@ -113,14 +113,34 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 
 		getIconType: function (level) {
 			if (level === 0) {
-				return "sap-icon://message-success";
+				return "sap-icon://accept";
+			} else if (level === 3) {
+				return "sap-icon://alert";
 			} else {
-				return "sap-icon://message-error";
+				return "sap-icon://cancel";
 			}
 		},
 
 		getIconColor: function (level) {
 			if (level === 0) {
+				return "#2b7d2b";
+			} else if (level === 3) {
+				return "#bbbb00";
+			} else {
+				return "#bb0000";
+			}
+		},
+
+		getIconType2: function (value) {
+			if (value === "X") {
+				return "sap-icon://accept";
+			} else {
+				return "sap-icon://cancel";
+			}
+		},
+
+		getIconColor2: function (value) {
+			if (value === "X") {
 				return "#2b7d2b";
 			} else {
 				return "#bb0000";

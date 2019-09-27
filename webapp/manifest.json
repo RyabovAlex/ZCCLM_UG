@@ -109,7 +109,8 @@
 					"pattern": "systems/{Id}",
 					"name": "Systems",
 					"target": "Systems"
-				}],
+				}
+			],
 			"targets": {
 				"Main": {
 					"viewType": "XML",
