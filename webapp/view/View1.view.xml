@@ -103,7 +103,7 @@
 						<sap.ui.layout:content>
 							<HBox>
 								<Image src="media/arrow.png" id="image0" width="100px"/>
-								<Table noDataText="No data found" id="DSO_Week" headerText="Week DSO (0SM_UPLDW)" growing="true" growingThreshold="30">
+								<Table noDataText="No data found" id="DSO_Week" headerText="Week DSO (0SM_UPLDW)" growing="true" growingThreshold="10">
 									<items/>
 									<columns>
 										<Column>
